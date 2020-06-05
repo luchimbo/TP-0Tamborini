@@ -59,14 +59,25 @@ int recibir_animo(){
 		printf(MSJ_RECIBIR_ANIMO);
 		scanf("%i", &animo_recibido);
 }
-	return animo_recibido;
+
+return animo_recibido;
+
 }
 
+char recibir_confianza(){
+	char confianza_recibida = DEF_NIVEL_CONFIANZA;
+	printf(MSJ_CONFIANZA);
+	scanf(" %c", &confianza_recibida);
 
+	while ((confianza_recibida != 'b') || (confianza_recibida != 'm') || (confianza_recibida != 'a')){
+		printf(MSJ_MAL_INGRESO);
+		printf(MSJ_CONFIANZA);
+		scanf(" %c", &confianza_recibida);
+	}
 
+return confianza_recibida;
 
-
-
+}
 /*
 
 int recibir_animo(){

@@ -14,8 +14,10 @@ int main(){
 
 	printf("Animo recibido: %i\n", animo);
 
-	
+	char confianza = DEF_NIVEL_CONFIANZA_JUGADOR;
 
+	confianza = recibir_confianza();
 
+	printf("Confianza recibida: %c\n", confianza);
 return 0;
 }
