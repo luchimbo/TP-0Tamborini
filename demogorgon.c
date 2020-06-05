@@ -3,7 +3,7 @@
 #define MSJ_ENFRENTAMIENTO "\n\nEl enfrentamiento esta por comenzar\n"
 
 #define MSJ_MAL_INGRESO "Ingreso no valido\n"
-#define MSJ_ANIMO "Ingrese el animo de El(Eleven) en un rango del 1 al 100 inclusive\n"
+#define MSJ_RECIBIR_ANIMO "Ingrese el animo de El(Eleven) en un rango del 1 al 100 inclusive\n"
 
 const int DEF_ANIMO = 0;
 const int MIN_ANIMO = 1;
@@ -48,11 +48,22 @@ void comenzar_enfrentamiento(){
 	printf(MSJ_ENFRENTAMIENTO);
 }
 
-int recibir_animo(animoRecibido){
-	if (animoRecibido < 0 && animoRecibido > 100)
-	printf(MSJ_MAL_INGRESO);
-	else printf("Animo recibido %i\n", animoRecibido);
+int recibir_animo(){
+	int animo_recibido = DEF_ANIMO;
+	printf(MSJ_RECIBIR_ANIMO);
+	scanf("%i", &animo_recibido);
+
+	
+	while((animo_recibido < 1) || (animo_recibido > 100)){	
+		printf(MSJ_MAL_INGRESO);
+		printf(MSJ_RECIBIR_ANIMO);
+		scanf("%i", &animo_recibido);
 }
+	return animo_recibido;
+}
+
+
+
 
 
 

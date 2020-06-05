@@ -5,16 +5,17 @@ const int DEF_ANIMO_JUGADOR = 0;
 const char DEF_NIVEL_CONFIANZA_JUGADOR = 'w';
 const float DEF_FUERZA_PSIQUICA = -1.0F;
 
-
 int main(){
 
+	int animo = DEF_ANIMO_JUGADOR;
 	comenzar_enfrentamiento();
 
-	int animoRecibido
-	printf(MSJ_ANIMO);
-	scanf("%i", &animoRecibido);
+	animo = recibir_animo();
 
-	recibir_animo();
+	printf("Animo recibido: %i\n", animo);
+
+	
+
 
 return 0;
 }
