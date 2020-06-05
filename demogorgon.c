@@ -68,15 +68,14 @@ char recibir_confianza(){
 	char confianza_recibida = DEF_NIVEL_CONFIANZA;
 	printf(MSJ_CONFIANZA);
 	scanf(" %c", &confianza_recibida);
-
-	while ((confianza_recibida != 'b') || (confianza_recibida != 'm') || (confianza_recibida != 'a')){
+	
+	while ((confianza_recibida != CONFIANZA_BAJA) || (confianza_recibida != CONFIANZA_MEDIA) || (confianza_recibida != CONFIANZA_ALTA)){
 		printf(MSJ_MAL_INGRESO);
 		printf(MSJ_CONFIANZA);
 		scanf(" %c", &confianza_recibida);
-	}
+}
 
 return confianza_recibida;
-
 }
 /*
 
