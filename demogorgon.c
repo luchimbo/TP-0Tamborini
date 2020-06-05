@@ -58,7 +58,7 @@ int recibir_animo(){
 		printf(MSJ_MAL_INGRESO);
 		printf(MSJ_RECIBIR_ANIMO);
 		scanf("%i", &animo_recibido);
-}
+	}
 
 return animo_recibido;
 
@@ -73,7 +73,7 @@ char recibir_confianza(){
 		printf(MSJ_MAL_INGRESO);
 		printf(MSJ_CONFIANZA);
 		scanf(" %c", &confianza_recibida);
-}
+	}
 
 return confianza_recibida;
 }
