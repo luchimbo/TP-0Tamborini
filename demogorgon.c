@@ -44,17 +44,20 @@ const float VALOR_GANO_JUSTO = 65.0F;
 
 #define MSJ_RESULT_DESC "\n\n\n\n\tEleven enfrento al Demogorgon pero no parecia que lo pudiera vencer\n\thasta que una luz cubrio todo el lugar desapareciendo al Demogorgon junto a Eleven\n\n\tFin.. ?\n\n"
 
-void comenzar_enfrentamiento(){
+void comenzar_enfrentamiento()
+{
 	printf(MSJ_ENFRENTAMIENTO);
 }
 
-int recibir_animo(){
+int recibir_animo()
+{
 	int animo_recibido = DEF_ANIMO;
 	printf(MSJ_RECIBIR_ANIMO);
 	scanf("%i", &animo_recibido);
 
 	
-	while((animo_recibido < 1) || (animo_recibido > 100)){	
+	while((animo_recibido < 1) || (animo_recibido > 100))
+	{	
 		printf(MSJ_MAL_INGRESO);
 		printf(MSJ_RECIBIR_ANIMO);
 		scanf("%i", &animo_recibido);
@@ -67,21 +70,21 @@ return animo_recibido;
 
 char recibir_confianza(){
     char confianza_recibida = DEF_NIVEL_CONFIANZA;
-while ((confianza_recibida ='a') || (confianza_recibida='m') || (confianza_recibida='b')){
+    printf(MSJ_CONFIANZA);
+    scanf(" %c", &confianza_recibida);
+while ((confianza_recibida !='a') || (confianza_recibida!='m') || (confianza_recibida!='b'))
+{
+    printf(MSJ_MAL_INGRESO);
     printf (MSJ_CONFIANZA);
     scanf(" %c", &confianza_recibida);
      
-    if ((confianza_recibida ='a') || (confianza_recibida='m') || (confianza_recibida='b')){
-    printf(MSJ_MAL_INGRESO);
-    }
-    else{
-      printf("Ingreso Aceptado\n");
+    if ((confianza_recibida =='a') || (confianza_recibida=='m') || (confianza_recibida=='b'))
+    {
+   printf("Ingreso aceptado\n");
     }
 }
 return confianza_recibida;
 }
-
-
 
 
 

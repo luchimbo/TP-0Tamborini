@@ -19,5 +19,6 @@ int main(){
 	confianza = recibir_confianza();
 
 	printf("Confianza recibida: %c\n", confianza);
+	
 return 0;
 }
