@@ -64,19 +64,29 @@ return animo_recibido;
 
 }
 
-char recibir_confianza(){
-	char confianza_recibida = DEF_NIVEL_CONFIANZA;
-	printf(MSJ_CONFIANZA);
-	scanf(" %c", &confianza_recibida);
-	
-	while ((confianza_recibida != CONFIANZA_BAJA) || (confianza_recibida != CONFIANZA_MEDIA) || (confianza_recibida != CONFIANZA_ALTA)){
-		printf(MSJ_MAL_INGRESO);
-		printf(MSJ_CONFIANZA);
-		scanf(" %c", &confianza_recibida);
-	}
 
+char recibir_confianza(){
+    char confianza_recibida = DEF_NIVEL_CONFIANZA;
+while ((confianza_recibida ='a') || (confianza_recibida='m') || (confianza_recibida='b')){
+    printf (MSJ_CONFIANZA);
+    scanf(" %c", &confianza_recibida);
+     
+    if ((confianza_recibida ='a') || (confianza_recibida='m') || (confianza_recibida='b')){
+    printf(MSJ_MAL_INGRESO);
+    }
+    else{
+      printf("Ingreso Aceptado\n");
+    }
+}
 return confianza_recibida;
 }
+
+
+
+
+
+
+
 /*
 
 int recibir_animo(){
