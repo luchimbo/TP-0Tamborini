@@ -80,7 +80,7 @@ while ((confianza_recibida !='a') || (confianza_recibida!='m') || (confianza_rec
      
     if ((confianza_recibida =='a') || (confianza_recibida=='m') || (confianza_recibida=='b'))
     {
-   printf("Ingreso aceptado\n");
+   		printf("Ingreso aceptado\n");
     }
 }
 return confianza_recibida;
