@@ -109,21 +109,25 @@ float recibir_fuerza_psiquica(int nivel_animo, char nivel_confianza){
 
 void resultado_enfrentamiento(float fuerza_psiquica){
 
-	if (fuerza_psiquica < 65)
+	if (fuerza_psiquica <= 65)
 	{
-		printf("Resultado desconocido\n");
+		printf("Resultado desconocido\nEleven y el Demogorgon desparecieron en el enfrentamiento\n");
 	}
-	else{
-		 printf("Resultado positivo\n");
+	else if (fuerza_psiquica>65 && fuerza_psiquica<67)
+	{
+		printf("Resultado positivo\nEleven conto con la fuerza justa para vencer al Demogorgon per se encuentra muy debil\n");
 	}
 	
+	else if (fuerza_psiquica > 67)
+	{
+		 printf("Resultado positivo\nEleven logro vencer al Demogorgon completamente\n");
+	}
+	else
+	{
+		printf("Error\n");
+	}
 }
 
-char enfrentamiento(float fuerza_psiquica){
-
-	if fuerza_psiquica
-
-}
 
 
 
