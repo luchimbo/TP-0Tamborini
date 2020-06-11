@@ -27,6 +27,8 @@ const float MULTIP_CONF_BAJO = 0.7F;
 const float MULTIP_CONF_MEDIO = 1.3F;
 const float MULTIP_CONF_ALTO = 3.7F;
 
+const float DEF_MULTIP_CONF = 0.0F;
+
 const char DEF_RESULTADO = 'w';
 #define GANO 'g'
 #define GANO_JUSTO 'h'
@@ -56,7 +58,7 @@ int recibir_animo()
 	scanf("%i", &animo_recibido);
 
 	
-	while((animo_recibido < 1) || (animo_recibido > 100))
+	while((animo_recibido < MIN_ANIMO) || (animo_recibido > MAX_ANIMO))
 	{	
 		printf(MSJ_MAL_INGRESO);
 		printf(MSJ_RECIBIR_ANIMO);
@@ -72,21 +74,56 @@ char recibir_confianza(){
     char confianza_recibida = DEF_NIVEL_CONFIANZA;
     printf(MSJ_CONFIANZA);
     scanf(" %c", &confianza_recibida);
-while ((confianza_recibida !='a') || (confianza_recibida!='m') || (confianza_recibida!='b'))
+while ((confianza_recibida !='a') && (confianza_recibida!='m') && (confianza_recibida!='b'))
 {
     printf(MSJ_MAL_INGRESO);
     printf (MSJ_CONFIANZA);
-    scanf(" %c", &confianza_recibida);
-     
-    if ((confianza_recibida =='a') || (confianza_recibida=='m') || (confianza_recibida=='b'))
-    {
-   		printf("Ingreso aceptado\n");
-    }
+    scanf(" %c", &confianza_recibida);   
+  
 }
 return confianza_recibida;
 }
 
 
+float recibir_fuerza_psiquica(int nivel_animo, char nivel_confianza){
+	float multiplicador = DEF_MULTIP_CONF;
+	float fuerza_psiquica = DEF_FUERZA_PSQUICA;
+
+	switch(nivel_confianza)
+	{
+		case CONFIANZA_BAJA: 
+			multiplicador = MULTIP_CONF_BAJO;
+			break;
+		case CONFIANZA_MEDIA:
+			multiplicador = MULTIP_CONF_MEDIO;
+			break;
+		case CONFIANZA_ALTA:
+			multiplicador = MULTIP_CONF_ALTO;
+			break;
+	}
+
+	fuerza_psiquica = nivel_animo * multiplicador;
+
+	return fuerza_psiquica;
+}
+
+void resultado_enfrentamiento(float fuerza_psiquica){
+
+	if (fuerza_psiquica < 65)
+	{
+		printf("Resultado desconocido\n");
+	}
+	else{
+		 printf("Resultado positivo\n");
+	}
+	
+}
+
+char enfrentamiento(float fuerza_psiquica){
+
+	if fuerza_psiquica
+
+}
 
 
 
