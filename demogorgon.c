@@ -115,9 +115,8 @@ void resultado_enfrentamiento(float fuerza_psiquica){
 	}
 	else if (fuerza_psiquica>65 && fuerza_psiquica<67)
 	{
-		printf("Resultado positivo\nEleven conto con la fuerza justa para vencer al Demogorgon per se encuentra muy debil\n");
+		printf("Resultado positivo\nEleven conto con la fuerza justa para vencer al Demogorgon pero se encuentra muy debil\n");
 	}
-	
 	else if (fuerza_psiquica > 67)
 	{
 		 printf("Resultado positivo\nEleven logro vencer al Demogorgon completamente\n");
