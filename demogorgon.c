@@ -56,7 +56,6 @@ int recibir_animo()
 	int animo_recibido = DEF_ANIMO;
 	printf(MSJ_RECIBIR_ANIMO);
 	scanf("%i", &animo_recibido);
-
 	
 	while((animo_recibido < MIN_ANIMO) || (animo_recibido > MAX_ANIMO))
 	{	
@@ -64,9 +63,8 @@ int recibir_animo()
 		printf(MSJ_RECIBIR_ANIMO);
 		scanf("%i", &animo_recibido);
 	}
-
+	
 return animo_recibido;
-
 }
 
 
@@ -104,7 +102,7 @@ float recibir_fuerza_psiquica(int nivel_animo, char nivel_confianza){
 
 	fuerza_psiquica = nivel_animo * multiplicador;
 
-	return fuerza_psiquica;
+return fuerza_psiquica;
 }
 
 void resultado_enfrentamiento(float fuerza_psiquica){
@@ -117,14 +115,11 @@ void resultado_enfrentamiento(float fuerza_psiquica){
 	{
 		printf("Resultado positivo\nEleven conto con la fuerza justa para vencer al Demogorgon pero se encuentra muy debil\n");
 	}
-	else if (fuerza_psiquica > 67)
+	else
 	{
 		 printf("Resultado positivo\nEleven logro vencer al Demogorgon completamente\n");
 	}
-	else
-	{
-		printf("Error\n");
-	}
+	
 }
 
 

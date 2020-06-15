@@ -20,7 +20,6 @@ int main(){
 	confianza = recibir_confianza();
 
 	printf("Confianza recibida: %c\n", confianza);
-
 	
 	fuerza_psiquica = recibir_fuerza_psiquica(animo, confianza);
 
